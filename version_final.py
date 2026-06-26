@@ -327,12 +327,9 @@ while True:
           longitud_serpiente = longitud_serpiente + 1
           
         if tipo_comida == "trampa":
-            
             puntos = puntos - 1
-
             if longitud_serpiente > 1:
              longitud_serpiente = max(1, int(longitud_serpiente * 0.5))
-
             while len(serpiente) > longitud_serpiente:
               serpiente.pop(0)
               
@@ -435,9 +432,7 @@ while True:
     if tipo_comida == "escudo":
        color_comida = (180, 180, 180)
 
-    pygame.draw.rect(
-     ventana,
-     color_comida,
+    pygame.draw.rect(ventana,color_comida,
      (comida_x, comida_y, tamano, tamano))
 
     texto_puntos = fuente.render("Puntos: " + str(puntos), True, (0, 0, 0))
